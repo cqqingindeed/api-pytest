@@ -38,7 +38,7 @@ class APIClient:
 
     def get_json(self, endpoint, headers=None, expected_status_code=200):
         headers = self.build_headers(headers)
-        # url = self.build_url(endpoint)
+        # breakpoint()
         response = self.get(endpoint, headers, expected_status_code)
         return response.json()
 

@@ -1,7 +1,9 @@
 import requests
 from clients.api_client import APIClient
+import pytest
 # from configs.settings import BASE_URL
 
+@pytest.mark.PUBLIC("002")
 def test_verify_public_demo_stats():
     # make the call
     endpoint = f"/api/v1/public/demo-stats"

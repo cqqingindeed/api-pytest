@@ -3,6 +3,7 @@ from clients.api_client import APIClient
 import pytest
 # from configs.settings import BASE_URL
 
+@pytest.mark.PUBLIC("001")
 def test_verify_public_status_endpoint():
     # make the call
     endpoint = f"/api/v1/public/status"
@@ -20,4 +21,3 @@ def test_verify_public_status_endpoint():
     assert response_body["api_version"] == "v1"
     assert response_body["server_time"], "verify server time exists"
     print("this is my first test ")
-

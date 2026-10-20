@@ -1,5 +1,7 @@
 from clients.api_client import APIClient
+import pytest
 
+@pytest.mark.APPS("004")
 def test_verify_user_can_update_application():
     # setup - create a new ap[lication
     # create a payload

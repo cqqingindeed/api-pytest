@@ -2,9 +2,11 @@
 from clients.api_client import APIClient
 
 from configs.settings import BASE_URL
+import pytest
 
 api_client = APIClient()
 
+@pytest.mark.AUTH("001")
 def test_verify_user_can_login_with_valid_credentials():
         # make the call
     # url = f"{BASE_URL}/api/v1/auth/login"
@@ -27,6 +29,7 @@ def test_verify_user_can_login_with_valid_credentials():
     # more assert
 
 
+@pytest.mark.AUTH("002")
 def test_verify_user_cannot_login_with_invalid_credential():
     endpoint = f"/api/v1/auth/login"
     # header = 

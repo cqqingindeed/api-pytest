@@ -1,5 +1,7 @@
 from clients.api_client import APIClient
+import pytest
 
+@pytest.mark.APPS("003")
 def test_verify_user_can_create_application():
 
     # create a payload
@@ -37,5 +39,4 @@ def test_verify_user_can_create_application():
     id = create_application_json["id"]
     delete_endpoint = f"/api/v1/applications/{id}"
     response = api_client.delete(delete_endpoint)
-
 

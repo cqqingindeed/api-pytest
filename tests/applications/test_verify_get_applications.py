@@ -2,8 +2,10 @@
 from clients.api_client import APIClient    # this replace import requests
 # from configs.settings import BASE_URL
 from helpers.auth_helper import login_user
+import pytest
 
 
+@pytest.mark.APPS("001")
 def test_verify_authenticated_user_get_applications():
     # get JWT token.
     # login with user and get the token

@@ -2,8 +2,10 @@
 from clients.api_client import APIClient
 # from configs.settings import BASE_URL
 from helpers.auth_helper import login_user
+import pytest
 
 
+@pytest.mark.APPS("002")
 def test_verify_authenticated_user_can_get_applications_summary():
     # get JWT token.
     # login with user and get the token
@@ -27,6 +29,5 @@ def test_verify_authenticated_user_can_get_applications_summary():
     assert response_body, "response body is not empty"
     assert isinstance(response_body["potential"], int)
     # add more assert
-
 
 

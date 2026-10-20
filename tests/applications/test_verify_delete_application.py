@@ -1,6 +1,8 @@
 from clients.api_client import APIClient
+import pytest
 
 
+@pytest.mark.APPS("005")
 def test_verify_user_can_delete_application():
     # create an application
     payload = {"company_name": "SuperSQA-ToBeDeleted",
@@ -37,6 +39,5 @@ def test_verify_user_can_delete_application():
     # breakpoint()
     # assert response_json
     # assert response_json["company_name"] == payload["company_name"]
-
 
 

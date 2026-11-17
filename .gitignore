@@ -13,3 +13,10 @@ __pycache__/
 
 # OS
 .DS_Store
+
+# Local planning docs and status reports (not committed)
+docs/todo/
+docs/design/
+docs/status/
+.claude/scheduled/.venv/
+.claude/scheduled/logs/
